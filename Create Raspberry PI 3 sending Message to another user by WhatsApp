@@ -5,7 +5,8 @@ sudo apt-get install python-dateutil
 sudo apt-get install python-setuptools
 sudo apt-get install python-dev
 sudo apt-get install libevent-dev
-sudo apt-get install ncurses-dev
+sudo apt-get install ncurses-dev or sudo apt-get install git python-dev libncurses5-dev
+
 python yowsup-cli registration --requestcode sms --phone 628787xxxxx --cc 62 --mcc 510 --mnc 11
 python yowsup-cli registration --register xxx-xxx -- phone 628787xxxxx --cc 62
 pi@raspberrypi:~/yowsup $ python yowsup-cli registration --register 665-314 --phone 628787xxxxx --cc 62 --mcc 510 --mnc 11
