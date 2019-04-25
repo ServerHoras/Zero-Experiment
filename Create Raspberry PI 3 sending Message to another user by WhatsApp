@@ -1,0 +1,41 @@
+sudo apt-get update
+sudo apt-get upgrade
+sudo rpi-update
+sudo apt-get install python-dateutil
+sudo apt-get install python-setuptools
+sudo apt-get install python-dev
+sudo apt-get install libevent-dev
+sudo apt-get install ncurses-dev
+python yowsup-cli registration --requestcode sms --phone 628787xxxxx --cc 62 --mcc 510 --mnc 11
+python yowsup-cli registration --register xxx-xxx -- phone 628787xxxxx --cc 62
+pi@raspberrypi:~/yowsup $ python yowsup-cli registration --register 665-314 --phone 628787xxxxx --cc 62 --mcc 510 --mnc 11
+yowsup-cli  v2.0.15
+yowsup      v2.5.7
+Copyright (c) 2012-2016 Tarek Galal
+http://www.openwhatsapp.org
+
+This software is provided free of charge. Copying and redistribution is
+encouraged.
+
+If you appreciate this software and you would like to support future
+development please consider donating:
+http://openwhatsapp.org/yowsup/donate
+
+
+INFO:yowsup.common.http.warequest:{"status":"ok","login":"628787xxxxx","type":"new","edge_routing_info":"CAIIBQ==","chat_dns_domain":"fb","pw":"lx+Bnf+60FSGb4DvtAX/JMl4oZY=","expiration":4444444444.0,"kind":"free","price":"$0.99","cost":"0.99","currency":"USD","price_expiration":1556576314}
+
+status: ok
+kind: free
+pw: lx+Bnf+60FSGb4DvtAX/XXXXX=
+price: $0.99
+price_expiration: 1556576314
+currency: USD
+cost: 0.99
+expiration: 4444444444.0
+login: 628787xxxxx
+type: new
+
+Ok, we're ready for the test, Yowsup has a demo application in /home/pi/yowsup/yowsup/demos below:
+cd /home/pi/yowsup
+yowsup-cli demos --yowsup --config config
+/message send 62821xxxxxxx "This is a message sent from Raspberry Pi"
